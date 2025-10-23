@@ -1,0 +1,40 @@
+[
+    {
+        "Janji": {
+            "genre": "romantis",
+            "terbit": "2018",
+            "jumlah": 7,
+            "jumlah_fix": 7
+        },
+        "jiwa": {
+            "genre": "fantasi",
+            "terbit": "2023",
+            "jumlah": 4,
+            "jumlah_fix": 4
+        },
+        "ragu": {
+            "genre": "romantis",
+            "terbit": "2004",
+            "jumlah": 89,
+            "jumlah_fix": 89
+        },
+        "Pemrograman Dasar": {
+            "genre": "edukasi",
+            "terbit": "2025",
+            "jumlah": 5,
+            "jumlah_fix": 5
+        },
+        "Bulan": {
+            "genre": "Fantasi",
+            "terbit": "2000",
+            "jumlah": 63,
+            "jumlah_fix": 64
+        },
+        "Jupiter": {
+            "genre": "sci-fi",
+            "terbit": "2025",
+            "jumlah": 10,
+            "jumlah_fix": 10
+        }
+    }
+]

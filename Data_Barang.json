@@ -1,0 +1,24 @@
+[
+    {
+        "pulpen": {
+            "jumlah": 20,
+            "poin": 20
+        },
+        "pensil": {
+            "jumlah": 20,
+            "poin": 20
+        },
+        "pembatas_buku": {
+            "jumlah": 10,
+            "poin": 50
+        },
+        "Gantungan Kunci Skena": {
+            "jumlah": "10",
+            "poin": "50"
+        },
+        "O": {
+            "jumlah": 10,
+            "poin": 10
+        }
+    }
+]

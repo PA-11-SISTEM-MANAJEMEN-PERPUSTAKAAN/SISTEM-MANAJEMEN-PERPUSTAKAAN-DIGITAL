@@ -1,0 +1,29 @@
+[
+    {
+        "admin": {
+            "password": "admin123",
+            "role": "admin",
+            "poin": "****"
+        },
+        "iqbal": {
+            "password": "iqbal123",
+            "role": "user",
+            "poin": 2539
+        },
+        "riski": {
+            "password": "riski123",
+            "role": "user",
+            "poin": 150
+        },
+        "dhiyya": {
+            "password": "dhiyya123",
+            "role": "user",
+            "poin": 60
+        },
+        "acer": {
+            "password": "acer555",
+            "role": "user",
+            "poin": 0
+        }
+    }
+]
