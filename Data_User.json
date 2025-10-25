@@ -8,22 +8,26 @@
         "iqbal": {
             "password": "iqbal123",
             "role": "user",
-            "poin": 2539
+            "poin": 2539,
+            "pinjam" : []
         },
         "riski": {
             "password": "riski123",
             "role": "user",
-            "poin": 150
+            "poin": 150,
+            "pinjam" : []
         },
         "dhiyya": {
             "password": "dhiyya123",
             "role": "user",
-            "poin": 60
+            "poin": 60,
+            "pinjam" : []
         },
         "acer": {
             "password": "acer555",
             "role": "user",
-            "poin": 0
+            "poin": 0,
+            "pinjam" : []
         }
     }
 ]
