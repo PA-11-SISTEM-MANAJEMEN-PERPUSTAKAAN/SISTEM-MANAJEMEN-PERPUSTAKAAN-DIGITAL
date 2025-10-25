@@ -27,7 +27,7 @@ def registrasi ():
                     print(" Jgn Klik CTRL+Z ")
                 except KeyboardInterrupt:
                         print(" Jgn Klik CTRL+C ")
-                user[0][input_username] = {"password": input_password, "role": "user", "poin" : 0}
+                user[0][input_username] = {"password": input_password, "role": "user", "poin" : 0, "pinjam" : []}
                 print(f"Registrasi Berhasil sebagai {input_username}, Mohon Tunggu...")
 
                 with open(data_user, 'w') as f:
@@ -730,3 +730,4 @@ def menu_utama():
             time.sleep(1)
 
 menu_utama()
+
