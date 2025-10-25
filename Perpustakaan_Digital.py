@@ -89,9 +89,14 @@ def tambah():
     while True:
         try:
             tambah_judul = input("Ketikkan Judul Buku : ")
-            if tambah_judul in dic_buku:
+            if tambah_judul not in dic_buku :
+                if "".join(tambah_judul.split()).isalpha():
+                    break
+                else:
+                    print("Inputan tidak boleh mengandung simbol")
+            else : 
                 print(f"Buku '{tambah_judul}' sudah ada di dalam database")
-            break
+
         except EOFError:
             print("Jgn Klik CTRL+Z")
             continue
@@ -123,12 +128,13 @@ def tambah():
     while True:
         try:
             tambah_terbit = input("Tahun Terbit (contoh: 2004): ")
-            if not tambah_terbit.isdigit():
-                print("Tahun terbit hanya boleh berupa angka")
+                
             tahun = int(tambah_terbit)
             if tahun < 1000 or tahun > 2025:
                 print("Tolong masukkan tahun terbit yang valid")
             break
+        except ValueError:
+            print("Tahun terbit hanya boleh berupa angka")
         except EOFError:
             print("Jgn Klik CTRL+Z")
             continue
@@ -154,6 +160,7 @@ def tambah():
         except KeyboardInterrupt:
             print("Jgn Klik CTRL+C")
             return
+    print(f"Buku Berjudul {tambah_judul} berhasil di tambah kedalam database")
             
 
     dic_buku[tambah_judul] = {"genre": tambah_genre, "terbit": tambah_terbit, "jumlah": jumlah_buku, "jumlah_fix": jumlah_buku}
@@ -406,15 +413,20 @@ def menu_admin ():
             print("Perintah tidak Valid, Mohon Tunggu...")
             time.sleep(1)
 
-def pinjam ():
+def pinjam (username):
     daftar_buku()
     with open(data_buku, "r") as f:
         buku = json.load(f)
+    with open(data_user, "r") as f:
+        user = json.load(f)
+    
+    dic_user = user[0]
     dic_buku = buku[0]
+
     daftar_judul = list(dic_buku.keys())
 
     try:
-        nomor_buku = int(input("Judul Buku yang ingin dipinjam (0 untuk kembali): "))
+        nomor_buku = int(input("Nomor Buku yang ingin dipinjam (0 untuk kembali): "))
     except ValueError:
         print("Input harus berupa Angka")
     except EOFError:
@@ -433,21 +445,40 @@ def pinjam ():
         pinjam_buku = daftar_judul[nomor_buku - 1]
         if dic_buku[pinjam_buku]["jumlah"] > 0 :
             dic_buku[pinjam_buku]["jumlah"] -= 1
+            dic_user[username]["pinjam"].append(pinjam_buku)
             print(f" Buku Berjudul {pinjam_buku} berhasil di pinjam")
+            print(f" Mendapat Bonus +10 Poin ")    
+            dic_user[username]["poin"] += 10
+
             with open(data_buku, "w") as f:
                 json.dump(buku, f, indent=4)
+            with open(data_user, "w") as f:
+                json.dump(user, f, indent=4)
         else: 
             print(" Stok Buku Habis")
 
-def kembalikan () :
-    daftar_buku()
+def kembalikan (username) :
     with open(data_buku, "r") as f:
         buku = json.load(f)
-    dic_buku = buku[0]
-    daftar_judul = list(dic_buku.keys())
+    with open(data_user, "r") as f:
+        user = json.load(f)
 
+    dic_user = user[0]
+    dic_buku = buku[0]
+    daftar_buku = dic_user[username]["pinjam"]
+
+    print("                      DAFTAR BUKU YANG DIPINJAM")
+    table = PrettyTable()
+    table.field_names = ["No", "Judul"]
+
+    i = 1
+    for judul in daftar_buku:
+        table.add_row([i,judul])
+        i += 1
+    print(table)
+    
     try:
-        nomor_buku = int(input("Judul Buku yang ingin dipinjam (0 untuk kembali): "))
+        nomor_buku = int(input("Nomor Buku yang ingin dikembalikan (0 untuk kembali): "))
     except ValueError:
         print("Input harus berupa Angka")
     except EOFError:
@@ -459,14 +490,23 @@ def kembalikan () :
         print("Kembali ke Menu Users, LOADING...")
         time.sleep(2)
     
-    elif nomor_buku < 1 or nomor_buku > len(daftar_judul):
+    elif nomor_buku < 1 or nomor_buku > len(daftar_buku):
         print(" Nomor tidak valid!")
 
     else:
-        balik_buku = daftar_judul[nomor_buku - 1]
+        balik_buku = daftar_buku[nomor_buku - 1]
         if dic_buku[balik_buku]["jumlah"] < dic_buku[balik_buku]["jumlah_fix"] :
             dic_buku[balik_buku]["jumlah"] += 1
+            dic_user[username]["pinjam"].remove(balik_buku)
+
             print(f" Buku Berjudul {balik_buku} berhasil dikembalikan")
+
+            print(f" Mendapat Bonus +10 Poin ")    
+            dic_user[username]["poin"] += 10
+
+            with open(data_user, "w") as f:
+                json.dump(user, f, indent=4)
+
             with open(data_buku, "w") as f:
                 json.dump(buku, f, indent=4)
         else: 
@@ -494,7 +534,7 @@ def topup_poin(username):
         except EOFError:
             print("Jangan Tekan Ctrl+Z")
             continue
-        if beli >= 10000:
+        if beli >= 10000 and beli <= 500000:
         
             dic_user[username]["poin"] += beli // 1000
             print("Memproses Transaksi, Mohon Tunggu...")
@@ -566,7 +606,7 @@ def tukar_poin(username):
         print(f"+===================================+")
             
         try:
-            nomor_barang = int(input("Pilih nomor buku yang akan di edit (0 untuk kembali): "))
+            nomor_barang = int(input("Pilih Barang yang ingin ditukar (0 untuk kembali): "))
         except ValueError:
             print("perintah harus berupa angka")
         except EOFError:
@@ -584,7 +624,7 @@ def tukar_poin(username):
             continue
         else:
             tukar_barang = daftar_barang[nomor_barang - 1]
-            if dic_barang[tukar_barang]["jumlah"] > 0 :
+            if dic_barang[tukar_barang]["jumlah"] >= 0 :
                 if dic_user[username]["poin"] > dic_barang[tukar_barang]["poin"]:
                     dic_user[username]["poin"] -= 1
                     dic_barang[tukar_barang]["jumlah"] -= 1
@@ -619,9 +659,9 @@ def menu_user(username):
         except KeyboardInterrupt:
             print(" Jgn Klik CTRL+C ")
         if perintah == "1":
-            pinjam()
+            pinjam(username)
         elif perintah == "2":
-            kembalikan() 
+            kembalikan(username) 
         elif perintah =="3":
             daftar_buku()
         elif perintah =="4":
