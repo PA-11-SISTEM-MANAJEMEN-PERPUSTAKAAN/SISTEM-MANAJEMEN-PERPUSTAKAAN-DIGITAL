@@ -34,8 +34,7 @@ otomatis berhasil menambahkan akun ke database
 
 Jika pengguna memilih pilihan 3. Keluar, maka akan menyelesaikan program seketika.
 
-<img width="359" height="132" alt="Picture14" src="https://github.com/user-attachments/assets/66a9edfe-d39f-4b2d-a2b9-3a776d19c4f1" />
-
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/cff9ae0c-a913-4e38-a86a-420b00317915" />
 
 ## Akun Admin
 Jika pengguna login menggunakan akun admin, maka akan masuk ke menu admin
@@ -52,7 +51,7 @@ Terdapat 7 opsi yang tersedia di menu admin, yaitu:
 7. Search
 8. Keluar
 
-<img width="915" height="321" alt="Screenshot 2025-10-26 041933" src="https://github.com/user-attachments/assets/3f7d4922-43b8-4ac0-bc5d-33c46e15e756" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/7dacd4b5-224f-4fcf-a010-c1ca0f467b64" />
 
 
 ## Opsi Tambah Buku
@@ -107,13 +106,13 @@ lalu barang di tambahkan ke dalam database.
 
 Jika memilih 7. Search, yaitu fitur untuk mencari buku berdasarkan keyword tertentu, pertama-tama Admin akan diminta menginput kata lalu program akan mencocokkan dengan judul yang ada di daftar buku, jika ada maka akan di tampilkan, jika tidak ada maka program akan menghasilkan output bahwa buku/judul yang di cari tidak tersedia.
 
-(gambar search)
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/c146362f-4363-4e00-8ec2-b6c96876dc0d" />
 
 ## Opsi Keluar
 
 Yang terakhir jika memilih 8. Keluar, maka akan log out dari akun admin dan kembali ke menu awal.
 
-<img width="459" height="186" alt="Picture24" src="https://github.com/user-attachments/assets/ba773124-54b8-4162-ac14-eeb16681254d" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/6aebad1d-3360-462c-8c6c-a960ee088477" />
 
 ## Akun User
 
@@ -130,7 +129,7 @@ Terdapat 6 opsi yang tersedia di menu user, yaitu:
 6. Search
 7. Keluar
 
-<img width="653" height="283" alt="Screenshot 2025-10-26 043032" src="https://github.com/user-attachments/assets/0d12d0d1-a7c9-4f3e-ac03-3bf0943a550e" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/9dfbfdda-22ed-4dd7-8901-d36a92705d23" />
 
 ## Opsi Pinjam Buku
 
@@ -175,7 +174,7 @@ Jika memilih 5. Tukar poin, maka akan menampilkan daftar barang yang dapat dituk
 
 Jika memilih 6. Search, yaitu fitur untuk mencari buku berdasarkan keyword tertentu, pertama-tama Admin akan diminta menginput kata lalu program akan mencocokkan dengan judul yang ada di daftar buku, jika ada maka akan di tampilkan, jika tidak ada maka program akan menghasilkan output bahwa buku/judul yang di cari tidak tersedia.
 
-(gambar search)
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/c146362f-4363-4e00-8ec2-b6c96876dc0d" />
 
 ## Opsi Keluar
 
