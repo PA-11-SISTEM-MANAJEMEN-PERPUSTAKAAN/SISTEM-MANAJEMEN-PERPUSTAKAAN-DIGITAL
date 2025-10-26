@@ -188,7 +188,7 @@ Dan yang terakhir jika memilih 7. Keluar, maka akan log out dari akun dan kembal
 
 > flowchart ketika pengguna pertama kali membuka program — terdapat pilihan untuk **Login** atau **Registrasi**.
 
-<img width="482" height="782" alt="Flowchart Menu Utama" src="https://github.com/user-attachments/assets/8f63198e-c342-4bcf-9372-19a2698b80f4" />
+<img width="654" height="1061" alt="Image" src="https://github.com/user-attachments/assets/b7155ef5-2b65-44c4-a928-f3727e825312" />
 
 ## 2️.Flowchart Registrasi
 
@@ -204,16 +204,18 @@ Dan yang terakhir jika memilih 7. Keluar, maka akan log out dari akun dan kembal
 <img width="529" height="774" alt="Flowchart Login Admin" src="https://github.com/user-attachments/assets/ac541f99-3cdc-4664-8f13-b2d91af210b0" />
 
 ### b. Menu Utama Admin
-<img width="453" height="729" alt="Flowchart Menu Admin 1" src="https://github.com/user-attachments/assets/fbf98ee0-f949-4e0b-a89d-06e69b47ea25" />
+<img width="679" height="1074" alt="Image" src="https://github.com/user-attachments/assets/67deada6-a950-401d-8fb3-b86b789e783d" />
 
-### c. Fitur Pengelolaan Data
+### c. Fitur Edit data
 <img width="306" height="785" alt="Flowchart Menu Admin 2" src="https://github.com/user-attachments/assets/46d2fbd8-a885-4ab3-aff0-3f1382d9fe50" />
-
+#33
 <img width="529" height="459" alt="Flowchart Tambah Data" src="https://github.com/user-attachments/assets/75cee36e-6654-47f9-8fff-ee326cfb05c3" />
 
-### d. Proses Hapus/Edit Data dan mencari buku
-<img width="529" height="626" alt="Flowchart Hapus Edit Data" src="https://github.com/user-attachments/assets/1d2ada39-ea43-4b92-b169-e40f029f557f" />
+### d. Daftar data dan tambah data barang
 
+<img width="829" height="881" alt="Image" src="https://github.com/user-attachments/assets/c943131a-a9d3-4993-b9dd-5c49a7fb1cbc" />
+### e. Proses mencari buku dan LogOut 
+<img width="671" height="750" alt="Image" src="https://github.com/user-attachments/assets/9b96ee05-8f23-49f8-80f6-271d4aa749ae" />
 
 ## 4️.Flowchart Menu User
 
