@@ -196,10 +196,9 @@ Dan yang terakhir jika memilih 6. Keluar, maka akan log out dari akun dan kembal
 ### c. Fitur Pengelolaan Data
 <img width="306" height="785" alt="Flowchart Menu Admin 2" src="https://github.com/user-attachments/assets/46d2fbd8-a885-4ab3-aff0-3f1382d9fe50" />
 
-### d. Proses Tambah Data
 <img width="529" height="459" alt="Flowchart Tambah Data" src="https://github.com/user-attachments/assets/75cee36e-6654-47f9-8fff-ee326cfb05c3" />
 
-### e. Proses Hapus/Edit Data
+### d. Proses Hapus/Edit Data dan mencari buku
 <img width="529" height="626" alt="Flowchart Hapus Edit Data" src="https://github.com/user-attachments/assets/1d2ada39-ea43-4b92-b169-e40f029f557f" />
 
 
@@ -207,13 +206,13 @@ Dan yang terakhir jika memilih 6. Keluar, maka akan log out dari akun dan kembal
 
 > Menjelaskan alur program ketika **User** melakukan login dan mengakses fitur yang tersedia.
 
-### a. Login User
+### a. Login User dan proses meminjam buku
 <img width="529" height="648" alt="Flowchart Login User" src="https://github.com/user-attachments/assets/ea84f0b8-4365-43a8-938c-1a3245a407a1" />
 
-### b. Menu Utama User
+### b. proses mengembalikan buku dan menampilkan daftar buku
 <img width="529" height="577" alt="Flowchart Menu User 1" src="https://github.com/user-attachments/assets/a0ea33ae-7900-4cda-b68e-360718065513" />
 
-### c. Proses Transaksi / Fitur Tambahan
+### c. Proses Transaksi dan proses menukar barang
 <img width="529" height="677" alt="Flowchart Fitur User" src="https://github.com/user-attachments/assets/47811fff-ff81-4db7-9f69-2e1f3b7edb05" />
 
 
