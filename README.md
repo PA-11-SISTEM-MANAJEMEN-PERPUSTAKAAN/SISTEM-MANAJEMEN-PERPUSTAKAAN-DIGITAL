@@ -169,15 +169,55 @@ Jika memilih 5. Tukar poin, maka akan menampilkan daftar barang yang dapat dituk
 Dan yang terakhir jika memilih 6. Keluar, maka akan log out dari akun dan kembali ke menu login.
 
 
+# **Flowchart Program Login & Registrasi**
 
-# Flowchart
-<img width="482" height="782" alt="Picture1" src="https://github.com/user-attachments/assets/8f63198e-c342-4bcf-9372-19a2698b80f4" /> 
-<img width="529" height="577" alt="Picture2" src="https://github.com/user-attachments/assets/a0ea33ae-7900-4cda-b68e-360718065513" />
-<img width="529" height="774" alt="Picture3" src="https://github.com/user-attachments/assets/ac541f99-3cdc-4664-8f13-b2d91af210b0" />
-<img width="453" height="729" alt="Picture4" src="https://github.com/user-attachments/assets/fbf98ee0-f949-4e0b-a89d-06e69b47ea25" />
-<img width="306" height="785" alt="Picture5" src="https://github.com/user-attachments/assets/46d2fbd8-a885-4ab3-aff0-3f1382d9fe50" />
-<img width="529" height="459" alt="Picture6" src="https://github.com/user-attachments/assets/75cee36e-6654-47f9-8fff-ee326cfb05c3" />
-<img width="529" height="626" alt="Picture7" src="https://github.com/user-attachments/assets/1d2ada39-ea43-4b92-b169-e40f029f557f" />
-<img width="529" height="648" alt="Picture8" src="https://github.com/user-attachments/assets/ea84f0b8-4365-43a8-938c-1a3245a407a1" />
-<img width="529" height="668" alt="Picture9" src="https://github.com/user-attachments/assets/c55fe904-dd75-4dfb-b9af-b79c5fcf11ce" />
-<img width="529" height="677" alt="Picture10" src="https://github.com/user-attachments/assets/47811fff-ff81-4db7-9f69-2e1f3b7edb05" />
+## 1️.Flowchart Menu Utama (Login dan Registrasi)
+
+> flowchart ketika pengguna pertama kali membuka program — terdapat pilihan untuk **Login** atau **Registrasi**.
+
+<img width="482" height="782" alt="Flowchart Menu Utama" src="https://github.com/user-attachments/assets/8f63198e-c342-4bcf-9372-19a2698b80f4" />
+
+## 2️.Flowchart Registrasi
+
+> Menunjukkan proses pembuatan akun baru oleh pengguna sebelum dapat masuk ke sistem.
+
+<img width="529" height="668" alt="Flowchart Registrasi" src="https://github.com/user-attachments/assets/c55fe904-dd75-4dfb-b9af-b79c5fcf11ce" />
+
+## 3️.Flowchart Login Sebagai Admin
+
+> Menjelaskan alur login dan fitur-fitur yang tersedia untuk **Admin** setelah berhasil masuk.
+
+### a. Login Admin
+<img width="529" height="774" alt="Flowchart Login Admin" src="https://github.com/user-attachments/assets/ac541f99-3cdc-4664-8f13-b2d91af210b0" />
+
+### b. Menu Utama Admin
+<img width="453" height="729" alt="Flowchart Menu Admin 1" src="https://github.com/user-attachments/assets/fbf98ee0-f949-4e0b-a89d-06e69b47ea25" />
+
+### c. Fitur Pengelolaan Data
+<img width="306" height="785" alt="Flowchart Menu Admin 2" src="https://github.com/user-attachments/assets/46d2fbd8-a885-4ab3-aff0-3f1382d9fe50" />
+
+### d. Proses Tambah Data
+<img width="529" height="459" alt="Flowchart Tambah Data" src="https://github.com/user-attachments/assets/75cee36e-6654-47f9-8fff-ee326cfb05c3" />
+
+### e. Proses Hapus/Edit Data
+<img width="529" height="626" alt="Flowchart Hapus Edit Data" src="https://github.com/user-attachments/assets/1d2ada39-ea43-4b92-b169-e40f029f557f" />
+
+
+## 4️.Flowchart Menu User
+
+> Menjelaskan alur program ketika **User** melakukan login dan mengakses fitur yang tersedia.
+
+### a. Login User
+<img width="529" height="648" alt="Flowchart Login User" src="https://github.com/user-attachments/assets/ea84f0b8-4365-43a8-938c-1a3245a407a1" />
+
+### b. Menu Utama User
+<img width="529" height="577" alt="Flowchart Menu User 1" src="https://github.com/user-attachments/assets/a0ea33ae-7900-4cda-b68e-360718065513" />
+
+### c. Proses Transaksi / Fitur Tambahan
+<img width="529" height="677" alt="Flowchart Fitur User" src="https://github.com/user-attachments/assets/47811fff-ff81-4db7-9f69-2e1f3b7edb05" />
+
+
+
+
+
+
