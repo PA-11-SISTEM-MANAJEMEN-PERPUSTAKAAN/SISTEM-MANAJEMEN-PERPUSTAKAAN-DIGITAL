@@ -26,14 +26,18 @@ def registrasi ():
                 except EOFError:
                     print(" Jgn Klik CTRL+Z ")
                 except KeyboardInterrupt:
-                        print(" Jgn Klik CTRL+C ")
-                user[0][input_username] = {"password": input_password, "role": "user", "poin" : 0, "pinjam" : []}
-                print(f"Registrasi Berhasil sebagai {input_username}, Mohon Tunggu...")
+                    print(" Jgn Klik CTRL+C ")
+                if len(input_password) >= 6:
+                    user[0][input_username] = {"password": input_password, "role": "user", "poin" : 0, "pinjam" : []}
+                    print(f"Registrasi Berhasil sebagai {input_username}, Mohon Tunggu...")
+                    with open(data_user, 'w') as f:
+                        json.dump(user, f, indent=4)
+                    time.sleep(3)
+                    break
 
-                with open(data_user, 'w') as f:
-                    json.dump(user, f, indent=4)
-                time.sleep(3)
-                break
+                else:
+                    print("Minimal password 6 karakter, Mohon Tunggu...")
+                    time.sleep(2)
             else:
                 print("simbol dan spasi tidak di perbolehkan, Mohon Tunggu...")
                 time.sleep(2)
@@ -192,6 +196,7 @@ def hapus():
         hapus_buku = daftar_judul[hapus_buku - 1]
 
         del dic_buku[hapus_buku]
+        print(f"{hapus_buku} Berhasil di hapus dari database")
 
         with open(data_buku, 'w') as f:
             json.dump(buku, f, indent=4)
@@ -203,7 +208,7 @@ def edit():
             buku = json.load(f)
         dic_buku = buku[0]      
         daftar_judul = list(dic_buku.keys())
-        
+
         try:
             nomor_buku = int(input("Pilih nomor buku yang akan di edit (0 untuk kembali): "))
         except ValueError:
@@ -322,7 +327,7 @@ def daftar_buku():
     print("                      DAFTAR BUKU")
     table = PrettyTable()
     table.field_names = ["No", "Judul", "Genre", "Tahun Terbit", "Jumlah"]
-
+    table.align ["Judul"] = "1"
     i = 1
     for judul, info in dic_buku.items():
         table.add_row([i,judul,info["genre"],info["terbit"],info["jumlah"]])
@@ -368,9 +373,57 @@ def tambah_barang():
             json.dump(barang, f, indent=4)
         break
 
-def menu_admin ():
+def search ():
     os.system('cls')
+    with open(data_buku, "r") as f:
+        buku = json.load(f)
+    dic_buku = buku[0]
+    
+    while True:
+        print("="*61)
+        print("                   SEARCH BUKU")
+        print("="*61)
+        
+        try:
+            cari = input("Masukkan judul buku (0 untuk kembali): ").lower()
+        except (EOFError, KeyboardInterrupt):
+            print("Input dibatalkan")
+
+        if cari == "0":
+            print("Kembali, Mohon Tunggu...")
+            time.sleep(1)
+            break
+        hasil_search = {}
+        for judul, info in dic_buku.items():
+            if cari in judul.lower():
+                hasil_search[judul] = info
+
+        if not hasil_search:
+            print(f"Tidak ada buku berjudul '{cari}'")
+            time.sleep(2)
+
+        print("="*61)
+        print(f"         HASIL PENCARIAN: '{cari}'")
+        table = PrettyTable()
+        table.field_names = ["No", "Judul", "Genre", "Tahun Terbit", "Jumlah"]
+        
+        i = 1
+        daftar_hasil = []
+        for judul, info in hasil_search.items():
+            table.add_row([i, judul, info["genre"], info["terbit"], info["jumlah"]])
+            daftar_hasil.append(judul)
+            i += 1
+        print(table)
+        print(f"Ditemukan {len(hasil_search)} buku")
+        print("Kembali, Mohon Tunggu...")
+        time.sleep(5)
+        
+        return daftar_hasil
+
+
+def menu_admin ():
     while True :
+        os.system('cls')
         tabel = PrettyTable()       
 
         print("="*100)
@@ -382,7 +435,8 @@ def menu_admin ():
         tabel.add_row(["4","Daftar Buku","Melihat daftar buku"])
         tabel.add_row(["5","Lihat Anggota Perpustakaan","Melihat daftar anggota yang telah registrasi pada perpustakaan"])
         tabel.add_row(["6","Tambah Barang","Tambah Merchandise Perpustakaan"])
-        tabel.add_row(["7","Keluar","Keluar dari program dan log out dari akun admin"])
+        tabel.add_row(["7","Search","Mencari Judul Buku"])
+        tabel.add_row(["8","Keluar","Keluar dari program dan log out dari akun admin"])
         print(tabel)
         
         try:
@@ -405,6 +459,8 @@ def menu_admin ():
         elif perintah == "6":
             tambah_barang()
         elif perintah == "7":
+            search()
+        elif perintah == "8":
             print("Log Out dari akun Admin")
             print("LOADING...")
             time.sleep(3)
@@ -624,7 +680,7 @@ def tukar_poin(username):
             continue
         else:
             tukar_barang = daftar_barang[nomor_barang - 1]
-            if dic_barang[tukar_barang]["jumlah"] >= 0 :
+            if dic_barang[tukar_barang]["jumlah"] >= 1 :
                 if dic_user[username]["poin"] > dic_barang[tukar_barang]["poin"]:
                     dic_user[username]["poin"] -= 1
                     dic_barang[tukar_barang]["jumlah"] -= 1
@@ -633,9 +689,8 @@ def tukar_poin(username):
                 else:
                     print("Poin tidak mencukupi")
             else:
-                print("Maaf, Stok barang habis")
-
-
+                print("Maaf, Stok barang habis, silahkan tukar poin dengan barang lain")
+                time.sleep(2)
 
 def menu_user(username):
     os.system('cls')
@@ -649,7 +704,8 @@ def menu_user(username):
         tabel.add_row(["3","Daftar buku","Melihat daftar buku"])
         tabel.add_row(["4","Top Up","Top up Poin"])
         tabel.add_row(["5","Tukar Poin","Menukar Poin dengan Merchandise perpustakaan"])
-        tabel.add_row(["6","Keluar","Log Out dan Kembali ke Menu Utama"])
+        tabel.add_row(["6","Search","Mencari Judul Buku"])
+        tabel.add_row(["7","Keluar","Log Out dan Kembali ke Menu Utama"])
         print(tabel)
         
         try:
@@ -669,6 +725,8 @@ def menu_user(username):
         elif perintah =="5":
             tukar_poin(username)
         elif perintah == "6":
+            search()
+        elif perintah == "7":
             print("Log Out dari akun")
             break
         else:
@@ -730,4 +788,3 @@ def menu_utama():
             time.sleep(1)
 
 menu_utama()
-
