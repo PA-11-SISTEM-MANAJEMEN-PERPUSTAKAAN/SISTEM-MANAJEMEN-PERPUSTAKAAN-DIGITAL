@@ -220,16 +220,13 @@ Dan yang terakhir jika memilih 7. Keluar, maka akan log out dari akun dan kembal
 > Menjelaskan alur program ketika **User** melakukan login dan mengakses fitur yang tersedia.
 
 ### a. Login User dan proses meminjam buku
-<img width="529" height="648" alt="Flowchart Login User" src="https://github.com/user-attachments/assets/ea84f0b8-4365-43a8-938c-1a3245a407a1" />
+![IMG-20251026-WA0020](https://github.com/user-attachments/assets/ef57961f-bbd6-45a0-a1f1-f40c0cb3a4bd)
 
-### b. proses mengembalikan buku dan menampilkan daftar buku
-<img width="529" height="577" alt="Flowchart Menu User 1" src="https://github.com/user-attachments/assets/a0ea33ae-7900-4cda-b68e-360718065513" />
+### b. Proses mengembalikan buku dan menampilkan daftar buku
+![IMG-20251026-WA0019](https://github.com/user-attachments/assets/645cba27-b664-496f-9e91-c93fd0c9af1d)
 
 ### c. Proses Transaksi dan proses menukar barang
-<img width="529" height="677" alt="Flowchart Fitur User" src="https://github.com/user-attachments/assets/47811fff-ff81-4db7-9f69-2e1f3b7edb05" />
+![IMG-20251026-WA0022](https://github.com/user-attachments/assets/7c74cc44-a4f4-434a-a635-4d0e13f2e354)
 
-
-
-
-
-
+### d. Proses mencari buku dan keluar dari menu user
+![IMG-20251026-WA0021](https://github.com/user-attachments/assets/3f2f89f5-cba6-4f81-8b2a-c95e7866d13b)
