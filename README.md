@@ -49,7 +49,8 @@ Terdapat 7 opsi yang tersedia di menu admin, yaitu:
 4. Daftar Buku
 5. Lihat Anggota Perpustakaan
 6. Tambah Barang
-7. Keluar
+7. Search
+8. Keluar
 
 <img width="915" height="321" alt="Screenshot 2025-10-26 041933" src="https://github.com/user-attachments/assets/3f7d4922-43b8-4ac0-bc5d-33c46e15e756" />
 
@@ -102,10 +103,15 @@ lalu barang di tambahkan ke dalam database.
 
 <img width="334" height="115" alt="Picture23" src="https://github.com/user-attachments/assets/e2d123f9-b2da-42a4-8321-1ea737b2c9ba" />
 
+## Opsi Search
+
+Jika memilih 7. Search, yaitu fitur untuk mencari buku berdasarkan keyword tertentu, pertama-tama Admin akan diminta menginput kata lalu program akan mencocokkan dengan judul yang ada di daftar buku, jika ada maka akan di tampilkan, jika tidak ada maka program akan menghasilkan output bahwa buku/judul yang di cari tidak tersedia.
+
+(gambar search)
 
 ## Opsi Keluar
 
-Yang terakhir jika memilih 7. Keluar, maka akan log out dari akun admin dan kembali ke menu awal.
+Yang terakhir jika memilih 8. Keluar, maka akan log out dari akun admin dan kembali ke menu awal.
 
 <img width="459" height="186" alt="Picture24" src="https://github.com/user-attachments/assets/ba773124-54b8-4162-ac14-eeb16681254d" />
 
@@ -121,7 +127,8 @@ Terdapat 6 opsi yang tersedia di menu user, yaitu:
 3. Daftar Buku
 4. Top Up
 5. Tukar Poin
-6. Keluar
+6. Search
+7. Keluar
 
 <img width="653" height="283" alt="Screenshot 2025-10-26 043032" src="https://github.com/user-attachments/assets/0d12d0d1-a7c9-4f3e-ac03-3bf0943a550e" />
 
@@ -164,9 +171,15 @@ Jika memilih 5. Tukar poin, maka akan menampilkan daftar barang yang dapat dituk
 
 <img width="485" height="317" alt="Screenshot 2025-10-26 043659" src="https://github.com/user-attachments/assets/d8163a72-f022-4d7b-809d-209d9a895f96" />
 
+## Opsi Search
+
+Jika memilih 6. Search, yaitu fitur untuk mencari buku berdasarkan keyword tertentu, pertama-tama Admin akan diminta menginput kata lalu program akan mencocokkan dengan judul yang ada di daftar buku, jika ada maka akan di tampilkan, jika tidak ada maka program akan menghasilkan output bahwa buku/judul yang di cari tidak tersedia.
+
+(gambar search)
+
 ## Opsi Keluar
 
-Dan yang terakhir jika memilih 6. Keluar, maka akan log out dari akun dan kembali ke menu login.
+Dan yang terakhir jika memilih 7. Keluar, maka akan log out dari akun dan kembali ke menu login.
 
 
 # **Flowchart Program Login & Registrasi**
